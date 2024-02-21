@@ -102,12 +102,12 @@ def send_request(date_from, date_to):
                                 download_file(file_url, filename)
                             print('			start upload: ' + filename)
                             b.upload_local_file(filename, filename)
-                        try:
-                            os.remove(filename)
-                        except FileNotFoundError:
-                            pass
-			
-            delete_recordings(meeting['uuid'])
+                        # try:
+                            # os.remove(filename)
+                        # except FileNotFoundError:
+                            # pass
+
+            # delete_recordings(meeting['uuid'])
             time_elapsed = time.time() - time_start
             speed = processed_storage / (time_elapsed / 60)
             print(
