@@ -44,8 +44,6 @@ def delete_recordings(uuid):
 
 def send_request(date_from, date_to):
     try:
-        print(f"ZOOM_KEY: {ZOOM_KEY}")
-
         response = requests.get(
             url="https://api.zoom.us/v2/users/me/recordings",
             params={
